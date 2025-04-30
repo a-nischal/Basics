@@ -1,0 +1,8 @@
+.body {
+  background-color: blue;
+}
+.card {
+  background-color: blue;
+  width: 90%;
+  max-width: 470px;
+}
