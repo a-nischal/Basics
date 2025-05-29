@@ -4,19 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
-      <h1>Nischal Adhikari</h1>
+      <h1 id="demo">Nischal Adhikari</h1>
+      <button id="button" onclick="myfunction()">Is an</button>
+      <script>
+        let istoggled = false;
+        document
+          .getElementById("button")
+          .addEventListener("click", function () {
+            if (istoggled) {
+              demo.innerHTML = "Nischal Adhikari";
+              const initial = "32px";
+              demo.style.fontSize = initial;
+            } else {
+              myfunction();
+            }
+            istoggled = !istoggled;
+          });
+        function myfunction() {
+          document.getElementById("demo").innerHTML = "MERN developer";
+          document.getElementById("demo").style.fontSize = "32px";
+        }
+      </script>
       <p>Web Developer</p>
       <nav>
-        <a href="#">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#About">About me</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
       </nav>
     </header>
-    <section>
+    <section id="About">
       <h1>About Me</h1>
       <p>
         jsdkjs sdjsks hsdjhsj hsjdh jsh jdhs jhj jsdhdj hsj hds jaskhkfdhf
@@ -24,7 +45,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="Skills">
       <h1>Skills</h1>
       <ul>
         <li>Html</li>
@@ -35,21 +56,25 @@
       </ul>
     </section>
 
-    <section>
+    <section id="Projects">
       <h1>Projects</h1>
-      <p style="font-weight: bold; font-size: large">Project 1: Portfolio</p>
+      <p style="font-weight: bold; font-size: large" class="project">
+        Project 1: Portfolio
+      </p>
       <p>A personak sdakjh dsjhak hk sjds k</p>
       <a href="#">View Project</a>
-      <p style="font-weight: bold; font-size: large">Project 2: To-Do list</p>
+      <p style="font-weight: bold; font-size: large" class="project">
+        Project 2: To-Do list
+      </p>
       <p>A personak sdakjh dsjhak hk sjds k</p>
       <a href="#">View Project</a>
     </section>
-    <section>
+    <section id="Contact">
       <h1>Contact Me</h1>
       <form>
         <input type="text" name="Name" placeholder="Enter your name " />
-        <input type="email" name="name " placeholder="Your Email">
-        <textarea name="name" rows="4" placeholder="Enter message" ></textarea>
+        <input type="email" name="name " placeholder="Your Email" />
+        <textarea name="name" rows="4" placeholder="Enter message"></textarea>
         <button>submit</button>
       </form>
     </section>
